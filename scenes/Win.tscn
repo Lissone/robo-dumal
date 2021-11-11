@@ -1,0 +1,78 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://tiles/BG/BG.png" type="Texture" id=1]
+[ext_resource path="res://font/BalsamiqSans-Bold.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://font/KOMIKAX_.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://script/Win.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 64
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 36
+outline_color = Color( 0.764706, 0.764706, 0.764706, 1 )
+font_data = ExtResource( 2 )
+
+[node name="Win" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="BG" type="Sprite" parent="."]
+position = Vector2( 512.357, 299.92 )
+scale = Vector2( 1.02266, 0.801783 )
+texture = ExtResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchor_left = 0.058
+anchor_top = 0.165
+anchor_right = 0.941
+anchor_bottom = 0.342
+margin_left = -0.125401
+margin_top = 0.117546
+margin_right = -0.317505
+margin_bottom = -0.0824585
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.913725, 1, 0.172549, 1 )
+custom_constants/shadow_offset_y = 32
+text = "Parabéns"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="back_menu" type="Button" parent="CanvasLayer"]
+anchor_left = 0.362
+anchor_top = 0.569
+anchor_right = 0.605
+anchor_bottom = 0.648
+margin_left = 0.431
+margin_top = 0.252838
+margin_right = -0.401001
+margin_bottom = -0.147156
+text = "Voltar para menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="CanvasLayer"]
+anchor_left = 0.371
+anchor_top = 0.35
+anchor_right = 0.591
+anchor_bottom = 0.423
+margin_left = 0.507477
+margin_top = -0.0795135
+margin_right = 0.227478
+margin_bottom = 0.120499
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.831373, 0.172549, 0, 1 )
+text = "Você ganhou!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="CanvasLayer/back_menu" to="." method="_on_back_menu_pressed"]

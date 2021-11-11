@@ -1,0 +1,355 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://font/KOMIKAX_.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://tiles/BG/BG.png" type="Texture" id=2]
+[ext_resource path="res://script/Menu.gd" type="Script" id=3]
+[ext_resource path="res://font/BalsamiqSans-Bold.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://sprite/cat/Idle (1).png" type="Texture" id=5]
+[ext_resource path="res://sprite/coin_gold.png" type="Texture" id=6]
+[ext_resource path="res://sprite/seta.png" type="Texture" id=7]
+[ext_resource path="res://sprite/robot/Idle (1).png" type="Texture" id=8]
+[ext_resource path="res://music/Retro Beat.ogg" type="AudioStream" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+size = 64
+outline_size = 3
+outline_color = Color( 0.764706, 0.192157, 0.192157, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0, 0, 0, 0.521569 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="DynamicFont" id=3]
+size = 28
+font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.890196, 0.890196, 0.890196, 1 )
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="DynamicFont" id=5]
+size = 22
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 24
+font_data = ExtResource( 4 )
+
+[node name="Menu" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="BG" type="Sprite" parent="."]
+position = Vector2( 512.357, 299.92 )
+scale = Vector2( 1.02266, 0.801783 )
+texture = ExtResource( 2 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchor_left = 0.079
+anchor_top = 0.25
+anchor_right = 0.962
+anchor_bottom = 0.427
+margin_left = -11.5501
+margin_top = -77.3408
+margin_right = -11.7421
+margin_bottom = -77.5408
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.780392, 0.647059, 0.647059, 1 )
+text = "EVIL BOT"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Start" type="Button" parent="CanvasLayer"]
+anchor_left = 0.348
+anchor_top = 0.378
+anchor_right = 0.463
+anchor_bottom = 0.456
+margin_left = -0.384705
+margin_top = 0.0296326
+margin_right = -0.144714
+margin_bottom = 0.229675
+text = "Start"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="Button" parent="CanvasLayer"]
+anchor_left = 0.511
+anchor_top = 0.378
+anchor_right = 0.626
+anchor_bottom = 0.456
+margin_left = -0.358154
+margin_top = -0.0827942
+margin_right = -0.118103
+margin_bottom = 0.117218
+text = "Quit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Controles" type="Node" parent="CanvasLayer"]
+
+[node name="Panel" type="Panel" parent="CanvasLayer/Controles"]
+margin_left = 36.0
+margin_top = 322.0
+margin_right = 378.0
+margin_bottom = 582.0
+rect_pivot_offset = Vector2( 75.3426, 91.4655 )
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="CanvasLayer/Controles"]
+margin_left = 62.7973
+margin_top = 337.897
+margin_right = 194.797
+margin_bottom = 372.897
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.666667, 1, 0.12549, 1 )
+text = "Controles:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel2" type="Panel" parent="CanvasLayer/Controles"]
+margin_left = 72.3105
+margin_top = 445.7
+margin_right = 114.31
+margin_bottom = 485.7
+rect_pivot_offset = Vector2( 31.498, 65.8808 )
+custom_styles/panel = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel3" type="Panel" parent="CanvasLayer/Controles"]
+margin_left = 139.734
+margin_top = 445.7
+margin_right = 181.734
+margin_bottom = 485.7
+custom_styles/panel = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Controles"]
+margin_left = 143.24
+margin_top = 447.287
+margin_right = 183.24
+margin_bottom = 487.287
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/Controles"]
+margin_left = 75.163
+margin_top = 447.287
+margin_right = 115.163
+margin_bottom = 487.287
+texture = ExtResource( 7 )
+flip_h = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="CanvasLayer/Controles"]
+margin_left = 194.254
+margin_top = 447.612
+margin_right = 335.254
+margin_bottom = 482.612
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = " = MOVER!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel4" type="Panel" parent="CanvasLayer/Controles"]
+margin_left = 103.808
+margin_top = 390.894
+margin_right = 145.808
+margin_bottom = 430.894
+custom_styles/panel = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect3" type="TextureRect" parent="CanvasLayer/Controles"]
+margin_left = 107.133
+margin_top = 428.348
+margin_right = 147.133
+margin_bottom = 468.348
+rect_rotation = -90.0
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="CanvasLayer/Controles"]
+margin_left = 187.175
+margin_top = 392.868
+margin_right = 328.175
+margin_bottom = 427.868
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = " = PULAR!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel5" type="Panel" parent="CanvasLayer/Controles"]
+margin_left = 106.436
+margin_top = 509.917
+margin_right = 148.436
+margin_bottom = 549.917
+custom_styles/panel = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="CanvasLayer/Controles"]
+margin_left = 120.332
+margin_top = 518.324
+margin_right = 160.332
+margin_bottom = 545.324
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "X"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label6" type="Label" parent="CanvasLayer/Controles"]
+margin_left = 187.905
+margin_top = 511.902
+margin_right = 328.905
+margin_bottom = 546.902
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = " = ATIRAR!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Itens" type="Node" parent="CanvasLayer"]
+
+[node name="Panel" type="Panel" parent="CanvasLayer/Itens"]
+margin_left = 643.252
+margin_top = 319.755
+margin_right = 985.252
+margin_bottom = 579.755
+rect_pivot_offset = Vector2( 75.3426, 91.4655 )
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="CanvasLayer/Itens"]
+margin_left = 670.049
+margin_top = 335.653
+margin_right = 802.049
+margin_bottom = 370.653
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.666667, 1, 0.12549, 1 )
+text = "Itens:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Itens"]
+margin_left = 815.443
+margin_top = 392.053
+margin_right = 1357.44
+margin_bottom = 866.053
+rect_scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/Itens"]
+margin_left = 669.562
+margin_top = 388.079
+margin_right = 1236.56
+margin_bottom = 944.079
+rect_scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect3" type="TextureRect" parent="CanvasLayer/Itens"]
+margin_left = 777.723
+margin_top = 482.996
+margin_right = 838.723
+margin_bottom = 543.996
+rect_scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/Itens"]
+margin_left = 723.37
+margin_top = 401.791
+margin_right = 807.37
+margin_bottom = 431.791
+custom_fonts/font = SubResource( 6 )
+text = "= Você!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="CanvasLayer/Itens"]
+margin_left = 867.001
+margin_top = 403.051
+margin_right = 970.001
+margin_bottom = 433.051
+custom_fonts/font = SubResource( 6 )
+text = "= Inimigo"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="CanvasLayer/Itens"]
+margin_left = 672.344
+margin_top = 489.355
+margin_right = 765.344
+margin_bottom = 519.355
+custom_fonts/font = SubResource( 6 )
+text = "Colete 5"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="CanvasLayer/Itens"]
+margin_left = 824.794
+margin_top = 487.466
+margin_right = 966.794
+margin_bottom = 517.466
+custom_fonts/font = SubResource( 6 )
+text = "para ganhar!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+volume_db = -30.0
+autoplay = true
+
+[connection signal="pressed" from="CanvasLayer/Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="CanvasLayer/Quit" to="." method="_on_Quit_pressed"]
