@@ -38,8 +38,8 @@ My first 2d platform game, developed as an evaluation for a digital games subjec
 
 ## Technologies
 
-* Python
 * Godot
+* GDScript
 
 ## Usage
 
