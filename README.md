@@ -30,26 +30,30 @@
 
 ## Description
 
-My first 2d platform game, developed as an evaluation for a digital games subject in my bachelor's course in information systems. It was really cool and challenging to develop this game, mainly because it is in python, a language that I'm still learning and I see a lot of potential in my career and using an engine that I had never heard of (Godot). I assume the game has some silly flaws, but I plan to improve it someday.
+My first 2d platform game, developed as an evaluation for a digital games subject in my bachelor's course in information systems. 
+
+It was really cool and challenging to develop this game, mainly because it is in python, a language that I'm still learning and I see a lot of potential in my career and using an engine that I had never heard of (Godot). I assume the game has some silly flaws, but I plan to improve it someday.
 
 ## Requirements
 
-* [Godot](https://godotengine.org/)
+- [Godot](https://godotengine.org/)
 
 ## Technologies
 
-* Godot
-* GDScript
+- Godot
+- GDScript
 
 ## Usage
 
 You can clone it on your pc using the command:
+
 ```bash
 git clone https://github.com/Lissone/robo-dumal.git
 cd robo-dumal
 ```
 
 Then just import the project into your Godot via the file:
+
 ```bash
 # Found at the root of the project
 ./project.godot
